@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --bg-green: #2cc185;
+  --color-hover: #545454;
+  --bg-body: #f4f4f4;
+  --danger: #dc3545;
+  --color-white: #fff;
+}
+
+/* default styling starts*/
+.fs-7 {
+  font-size: 14px !important;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+/* default styling ends */
+
+/* top info starts */
+.my-order {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-infos {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.top-info p {
+  font-size: 0.875rem !important;
+}
+
+.header {
+  background-color: var(--bg-green);
+}
+
+.nav-item a:hover {
+  color: var(--color-hover) !important;
+}
+
+.navbar-toggler {
+  font-size: 0.8rem;
+}
+
+.dropdown-menu li .my-dropdown-menu:active {
+  background-color: var(--bg-green);
+  color: var(--color-white) !important;
+}
+
+.dropdown-menu li .my-dropdown-menu-logout:active {
+  background-color: var(--danger);
+  color: var(--color-white) !important;
+}
+/* top info ends */
+
+/* main starts */
+.my-pt-main {
+  padding-top: 8rem;
+  padding-bottom: 1rem;
+  background-image: url(../images/upt.jpg);
+  background-size: cover;
+}
+
+.my-mtb-body {
+  margin-top: 10rem;
+  margin-bottom: 3rem;
+}
+
+.login {
+  padding: 1.5rem;
+  transition: padding-top 0.5s ease, padding-bottom 0.5s ease;
+}
+
+.login:hover {
+  padding-top: 1.9rem;
+  padding-bottom: 1.9rem;
+}
+/* main ends */
+
+/* body starts */
+.information .col .card {
+  padding: 0;
+  transition: padding-top 0.5s ease;
+}
+
+.information .col .card:hover {
+  padding-top: 0.5rem;
+}
+/* body ends */
+
+/* body information.php starts */
+.my-p-body {
+  padding: 1.5rem;
+  transition: padding-top 0.5s ease, padding-bottom 0.5s ease;
+}
+
+.my-p-body:hover {
+  padding-top: 1.9rem;
+  padding-bottom: 1.9rem;
+}
+
+.limit-text {
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+/* body information.php ends */
+
+/* body account-registration.php starts */
+.my-gap-6 {
+  margin-bottom: 43px;
+}
+/* body account-registration.php ends */
+
+/* footer starts */
+footer .container img {
+  width: 45px;
+  object-fit: contain;
+}
+
+.footer-nav a:hover {
+  color: var(--bg-green) !important;
+}
+/* footer ends */
