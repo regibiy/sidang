@@ -1,4 +1,5 @@
 <?php
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -7,23 +8,23 @@ function sendMail($emailReceiver, $nameReceiver, $title, $content)
 {
     $emailSender = "noreply@puskesmasalianyangpnk.site";
     $senderName = "Puskesmas Alianyang";
-    
+
     require 'vendor/autoload.php';
 
     $mail = new PHPMailer(true);
 
     try {
-        $mail->SMTPDebug = 0;                                      
-        $mail->isSMTP();                                            
-        $mail->Host       = 'puskesmasalianyangpnk.site';                     
-        $mail->SMTPAuth   = true;                                
-        $mail->Username   = $emailSender;                        
-        $mail->Password   = "ikn9pKI,DGh&";                
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;         
-        $mail->Port       = 465;                            
+        $mail->SMTPDebug = 0;
+        $mail->isSMTP();
+        $mail->Host       = 'puskesmasalianyangpnk.site';
+        $mail->SMTPAuth   = true;
+        $mail->Username   = $emailSender;
+        $mail->Password   = "ikn9pKI,DGh&";
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port       = 465;
 
         $mail->setFrom($emailSender, $senderName);
-        $mail->addAddress($emailReceiver, $nameReceiver);          
+        $mail->addAddress($emailReceiver, $nameReceiver);
 
         $mail->isHTML(true);
         $mail->Subject = $title;
@@ -40,23 +41,23 @@ function sendMailAdmin($emailReceiver, $nameReceiver, $title, $content)
 {
     $emailSender = "noreply@puskesmasalianyangpnk.site";
     $senderName = "Puskesmas Alianyang";
-    
+
     require '../vendor/autoload.php';
 
     $mail = new PHPMailer(true);
 
     try {
-        $mail->SMTPDebug = 0;                                      
-        $mail->isSMTP();                                            
-        $mail->Host       = 'puskesmasalianyangpnk.site';                     
-        $mail->SMTPAuth   = true;                                
-        $mail->Username   = $emailSender;                        
-        $mail->Password   = "ikn9pKI,DGh&";                
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;         
-        $mail->Port       = 465;                            
+        $mail->SMTPDebug = 0;
+        $mail->isSMTP();
+        $mail->Host       = 'puskesmasalianyangpnk.site';
+        $mail->SMTPAuth   = true;
+        $mail->Username   = $emailSender;
+        $mail->Password   = "ikn9pKI,DGh&";
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port       = 465;
 
         $mail->setFrom($emailSender, $senderName);
-        $mail->addAddress($emailReceiver, $nameReceiver);          
+        $mail->addAddress($emailReceiver, $nameReceiver);
 
         $mail->isHTML(true);
         $mail->Subject = $title;
@@ -233,7 +234,7 @@ function cek_libur_nasional($tanggal)
             throw new Exception(curl_error($curl));
         }
         $array_data = json_decode($data);
-        foreach($array_data as $value) {
+        foreach ($array_data as $value) {
             if ($default_date === $value->holiday_date) {
                 $national_holiday = $value->holiday_name;
                 return $national_holiday;
